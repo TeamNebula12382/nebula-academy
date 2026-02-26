@@ -11,12 +11,14 @@
   <meta name="description" content="Syosset Nebula's free coding academy: Python basics and FTC robotics with Syrius the Astronaut. Interactive lessons for outreach. No sign-up required.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="premium">
+  <div class="bg-mesh" aria-hidden="true"></div>
   <div class="bg-stars" aria-hidden="true"></div>
   <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
 
   <!-- Loading screen -->
   <div id="loading-screen" class="loading-screen">
@@ -36,8 +38,10 @@
     </a>
     <nav class="main-nav">
       <a href="#" data-nav="landing">Home</a>
-      <a href="#" data-nav="landing" data-scroll="about">About</a>
-      <a href="#" data-nav="level-map">Start Learning</a>
+      <a href="#" data-nav="about-page">About</a>
+      <a href="#" data-nav="resources">Resources</a>
+      <a href="#" data-nav="faq">FAQ</a>
+      <a href="#" class="nav-cta" data-nav="track-select">Start Learning</a>
     </nav>
   </header>
 
@@ -53,8 +57,13 @@
         <p class="hero-byline">from Syosset Nebula</p>
         <p class="tagline">Python basics, then FTC robotics. Interactive lessons for outreach. Run code in your browser.</p>
         <div class="hero-ctas">
-          <a href="#" class="btn btn-primary btn-glow" data-nav="level-map">Launch Course</a>
-          <a href="#" class="btn btn-secondary hero-cta-secondary" data-nav="landing" data-scroll="about">Why Syosset Nebula</a>
+          <a href="#" class="btn btn-primary btn-glow" data-nav="track-select">Launch Course</a>
+          <a href="#" class="btn btn-secondary hero-cta-secondary" data-nav="about-page">Why Syosset Nebula</a>
+        </div>
+        <div class="hero-stats">
+          <span class="hero-stat"><strong>3</strong> Levels</span>
+          <span class="hero-stat"><strong>17</strong> Lessons</span>
+          <span class="hero-stat"><strong>100%</strong> Free</span>
         </div>
       </div>
 
@@ -96,14 +105,121 @@
             <p>Step-by-step lessons with Syrius. Progress saved locally so learners can continue later.</p>
           </div>
         </div>
-        <a href="#" class="btn btn-primary" data-nav="level-map">Start Learning</a>
+        <a href="#" class="btn btn-primary" data-nav="track-select">Start Learning</a>
       </section>
+    </section>
+
+    <!-- Track select (Python vs Java) -->
+    <section id="track-select" class="view">
+      <h2 class="section-title">Choose Your Track</h2>
+      <p class="section-sub">Pick a language track, then work through its levels in order.</p>
+      <div class="track-select-grid">
+        <a href="#" class="track-card" data-track="python" data-nav="level-map">
+          <span class="track-icon" aria-hidden="true">🐍</span>
+          <h3>Python</h3>
+          <p>Start with Python basics, then move into <strong>advanced Python</strong>—loops, functions, and more.</p>
+          <span class="track-cta">Start Python track →</span>
+        </a>
+        <a href="#" class="track-card" data-track="java" data-nav="level-map">
+          <span class="track-icon" aria-hidden="true">☕</span>
+          <h3>Java</h3>
+          <p>Learn <strong>Java basics</strong> first, then FTC robotics and the virtual robot.</p>
+          <span class="track-cta">Start Java track →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About page -->
+    <section id="about-page" class="view page-view">
+      <div class="page-hero">
+        <h1 class="page-title">About Syosset Nebula</h1>
+        <p class="page-lead">We're an FTC team from Syosset, NY—on a mission to make coding and robotics accessible to everyone.</p>
+      </div>
+      <div class="page-content">
+        <div class="about-grid">
+          <div class="about-card-large">
+            <h2>Our Mission</h2>
+            <p>Syosset Nebula builds robots for the First Tech Challenge and runs outreach to help the next generation discover STEM. This Coding Academy is our way of sharing what we've learned—Python, FTC concepts, and a virtual robot you can program in your browser—with zero cost and zero sign-up.</p>
+          </div>
+          <div class="about-card-large">
+            <h2>What You'll Learn</h2>
+            <p><strong>Level 1 — Python Basics:</strong> Variables, print, numbers, and comments. Run real code in every lesson.</p>
+            <p><strong>Level 2 — FTC Robotics:</strong> Drivetrains, sensors, autonomous vs TeleOp, and strategy.</p>
+            <p><strong>Level 3 — Virtual Robot:</strong> Java FTC–style commands: drive forward, turn, sleep. See your code move a robot on screen.</p>
+          </div>
+          <div class="about-card-large">
+            <h2>Built for Outreach</h2>
+            <p>One link. No accounts. Perfect for workshops, demos, and events. Progress is saved in your browser so learners can continue anytime. We hope teachers, mentors, and teams use this to inspire the next wave of coders and engineers.</p>
+          </div>
+        </div>
+        <p class="page-cta"><a href="#" class="btn btn-primary" data-nav="level-map">Start Learning</a></p>
+      </div>
+    </section>
+
+    <!-- Resources page -->
+    <section id="resources" class="view page-view">
+      <div class="page-hero">
+        <h1 class="page-title">Resources</h1>
+        <p class="page-lead">Links and tools to go further with Python and FTC.</p>
+      </div>
+      <div class="page-content">
+        <div class="resource-grid">
+          <a href="https://www.firstinspires.org/robotics/ftc" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <span class="resource-icon">🏆</span>
+            <h3>FIRST Tech Challenge</h3>
+            <p>Official FTC site: game info, rules, and how to start a team.</p>
+          </a>
+          <a href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <span class="resource-icon">🐍</span>
+            <h3>Python.org</h3>
+            <p>Get started with Python on your computer.</p>
+          </a>
+          <a href="https://github.com/FIRST-Tech-Challenge" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <span class="resource-icon">🤖</span>
+            <h3>FTC GitHub</h3>
+            <p>Official FTC SDK and sample code.</p>
+          </a>
+        </div>
+        <p class="page-cta"><a href="#" class="btn btn-secondary" data-nav="landing">Back to Home</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ page -->
+    <section id="faq" class="view page-view">
+      <div class="page-hero">
+        <h1 class="page-title">FAQ</h1>
+        <p class="page-lead">Common questions about the Coding Academy.</p>
+      </div>
+      <div class="page-content">
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Do I need to create an account?</button>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>No. Everything runs in your browser. Progress is saved locally on your device.</p></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">What do I need to run the lessons?</button>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Just a modern browser (Chrome, Firefox, Safari, or Edge). No installs required.</p></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Is the virtual robot like real FTC code?</button>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Yes. The commands (driveForward, turn, sleep) mirror the kind of logic you use in FTC Java—simplified so you can see the robot move right away.</p></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Can I use this for my team or classroom?</button>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Absolutely. One link, no sign-up—ideal for workshops and outreach. Share the site and learners can start immediately.</p></div>
+          </div>
+        </div>
+        <p class="page-cta"><a href="#" class="btn btn-primary" data-nav="level-map">Start Learning</a></p>
+      </div>
     </section>
 
     <!-- Level map -->
     <section id="level-map" class="view">
-      <h2 class="section-title">🗺️ Level Map</h2>
-      <p class="section-sub">Level Progress: <strong id="level-progress-summary">0/2</strong> levels</p>
+      <div class="level-map-top">
+        <a href="#" class="back-link" data-nav="track-select">← Choose track</a>
+        <h2 class="section-title">🗺️ Level Map</h2>
+        <p class="section-sub">Track: <strong id="track-name">Python</strong> — Level progress: <strong id="level-progress-summary">0/2</strong> levels</p>
+      </div>
       <div id="level-map-list" class="level-map-list"></div>
     </section>
 
@@ -138,9 +254,9 @@
         </aside>
 
         <div class="editor-column">
-          <div class="editor-panel">
+          <div class="editor-panel" id="editor-panel">
             <div class="editor-toolbar">
-              <span class="editor-label">🐍 Python Editor</span>
+              <span class="editor-label" id="editor-label">🐍 Python Editor</span>
               <div class="editor-buttons">
                 <button type="button" id="run-btn" class="btn btn-run">▶️ Run My Code</button>
                 <button type="button" id="reset-btn" class="btn btn-reset">🔄 Reset</button>
@@ -148,7 +264,11 @@
             </div>
             <textarea id="code-editor" class="code-editor" spellcheck="false" placeholder="# Write your code here..."></textarea>
           </div>
-          <div class="output-panel">
+          <div class="robot-arena-wrap" id="robot-arena-wrap" style="display: none;">
+            <h4>🤖 Virtual Robot Arena</h4>
+            <canvas id="robot-arena" width="640" height="280"></canvas>
+          </div>
+          <div class="output-panel" id="output-panel">
             <h4>Output Console</h4>
             <pre id="output-console" class="output-console">Click "Run My Code" when ready!</pre>
           </div>
@@ -165,7 +285,10 @@
       <div class="footer-links">
         <a href="https://www.firstinspires.org/robotics/ftc" target="_blank" rel="noopener noreferrer">FIRST Tech Challenge</a>
         <a href="#" data-nav="landing">Home</a>
-        <a href="#" data-nav="level-map">Start Learning</a>
+        <a href="#" data-nav="about-page">About</a>
+        <a href="#" data-nav="resources">Resources</a>
+        <a href="#" data-nav="faq">FAQ</a>
+        <a href="#" data-nav="track-select">Start Learning</a>
       </div>
       <p class="footer-copy">FTC outreach. No sign-up required.</p>
     </div>
