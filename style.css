@@ -1,5 +1,5 @@
 /*
-  Nebula Coding Academy — Purple astronaut theme, animations, responsive.
+  Nebula Coding Academy. Purple astronaut theme, animations, responsive.
   Level map, Syrius panel, editor, modal, loading screen.
 */
 
@@ -291,6 +291,9 @@ main {
   align-items: center;
   width: 100%;
   animation: float 4s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-logo {

@@ -1,6 +1,6 @@
 /**
- * Nebula Coding Academy — Level/step flow, Syrius tips, simulated Python,
- * full course (Python basics → FTC robotics), hints, reset, level complete modal.
+ * Nebula Coding Academy. Level/step flow, Syrius tips, simulated Python,
+ * Python basics and FTC robotics, hints, reset, level complete modal.
  */
 
 (function () {
@@ -823,7 +823,7 @@
 
       return `
         <div class="level-block">
-          <h3>${escapeHtml(level.title)} ${allDone ? '✓' : ''} — ${doneCount}/${stepCount} steps</h3>
+          <h3>${escapeHtml(level.title)} ${allDone ? '✓' : ''} (${doneCount}/${stepCount} steps)</h3>
           <ul class="level-steps">${stepsHtml}</ul>
         </div>
       `;
