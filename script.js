@@ -1,6 +1,6 @@
 /**
- * Nebula Coding Academy — Level/step flow, Syrius tips, simulated Python,
- * full course (Python basics → FTC robotics), hints, reset, level complete modal.
+ * Nebula Coding Academy. Level/step flow, Syrius tips, simulated Python,
+ * Python basics and FTC robotics, hints, reset, level complete modal.
  */
 
 (function () {
@@ -32,8 +32,8 @@
           id: 'multiple-prints',
           title: 'Multiple Prints',
           tip: 'Each print() sends one line. Use several prints to build a short story or intro.',
-          hint: 'Write 3–4 print statements, one per line.',
-          instructions: '<p>Write several <code>print()</code> statements—one per line—to introduce yourself: name, mission, and a short message.</p>',
+          hint: 'Write 3 or 4 print statements, one per line.',
+          instructions: '<p>Write several <code>print()</code> statements, one per line, to introduce yourself: name, mission, and a short message.</p>',
           starterCode: 'print("Name: Syrius")\nprint("Mission: Learn Python")\nprint("Ready to code!")',
         },
         {
@@ -63,7 +63,7 @@
           title: 'What is FTC?',
           tip: 'FTC = First Tech Challenge. You program robots that compete in games. Code controls motors and sensors.',
           hint: 'FTC robots use code to move motors and read sensors.',
-          instructions: '<p><strong>First Tech Challenge (FTC)</strong> is a robotics competition. Teams build and program robots to complete tasks. You write code (often in Java or blocks) to control <strong>motors</strong>, read <strong>sensors</strong>, and make decisions.</p><p>Use the editor to print your team name or robot name—just like naming your mission in Python!</p>',
+          instructions: '<p><strong>First Tech Challenge (FTC)</strong> is a robotics competition. Teams build and program robots to complete tasks. You write code (often in Java or blocks) to control <strong>motors</strong>, read <strong>sensors</strong>, and make decisions.</p><p>Use the editor to print your team name or robot name, just like naming your mission in Python.</p>',
           starterCode: 'team = "Nebula Robotics"\nprint("Team:", team)\nprint("Ready for competition!")',
         },
         {
@@ -79,7 +79,7 @@
           title: 'Sensors',
           tip: 'Sensors give the robot information: distance, color, touch. Your code reads sensor values and decides what to do.',
           hint: 'Example: if distance_sensor < 10 then stop or turn.',
-          instructions: '<p>Robots use <strong>sensors</strong> (distance, color, touch) to understand the world. Your code reads values and makes decisions—e.g. "if distance &lt; 10 cm, stop."</p><p>Print simulated sensor readings to practice output.</p>',
+          instructions: '<p>Robots use <strong>sensors</strong> (distance, color, touch) to understand the world. Your code reads values and makes decisions, e.g. "if distance &lt; 10 cm, stop."</p><p>Print simulated sensor readings to practice output.</p>',
           starterCode: 'print("Distance sensor: 25 cm")\nprint("Color: RED")\nprint("Touch: not pressed")',
         },
         {
@@ -248,7 +248,7 @@
 
       return `
         <div class="level-block">
-          <h3>${escapeHtml(level.title)} ${allDone ? '✓' : ''} — ${doneCount}/${stepCount} steps</h3>
+          <h3>${escapeHtml(level.title)} ${allDone ? '✓' : ''} (${doneCount}/${stepCount} steps)</h3>
           <ul class="level-steps">${stepsHtml}</ul>
         </div>
       `;
